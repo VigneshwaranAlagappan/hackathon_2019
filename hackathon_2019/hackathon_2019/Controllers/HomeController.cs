@@ -26,10 +26,5 @@ namespace hackathon_2019.Controllers
 
             return View();
         }
-
-        public void YouTubeData()
-        {
-
-        }
     }
 }
