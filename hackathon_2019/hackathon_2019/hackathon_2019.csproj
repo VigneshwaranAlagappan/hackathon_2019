@@ -46,6 +46,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -53,6 +65,9 @@
       <HintPath>C:\Program Files (x86)\Microsoft SQL Server Compact Edition\v4.0\Desktop\System.Data.SqlServerCe.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -103,9 +118,6 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -124,21 +136,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Accounts\AccountsController.cs" />
     <Compile Include="Controllers\BugsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BugManagement.cs" />
-    <Compile Include="Models\Connection.cs" />
-    <Compile Include="Models\Database.cs" />
-    <Compile Include="Models\DataClass\ConditionColumn.cs" />
-    <Compile Include="Models\DataClass\Result.cs" />
-    <Compile Include="Models\DataProvider.cs" />
-    <Compile Include="Models\QueryBuilder.cs" />
-    <Compile Include="Models\Users.cs" />
-    <Compile Include="Models\Bugs.cs" />
-    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -147,23 +151,131 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\application\loginlogo.png" />
+    <Content Include="Content\Styles\Bootstrap\bootstrap-select.css" />
+    <Content Include="Content\Styles\Bootstrap\Bootstrap-theme.css" />
+    <Content Include="Content\Styles\Bootstrap\bootstrap.min.css" />
+    <Content Include="Content\Styles\Editor\easymde.min.css" />
+    <Content Include="Content\Styles\EssentialJS\common-images\ejicons.svg" />
+    <Content Include="Content\Styles\EssentialJS\ej.theme.min.css" />
+    <Content Include="Content\Styles\EssentialJS\ej.widgets.core.min.css" />
+    <Content Include="Content\Styles\EssentialJS\images\ajax-loader.gif" />
+    <Content Include="Content\Styles\EssentialJS\images\checkedtick.png" />
+    <Content Include="Content\Styles\EssentialJS\images\gradient.png" />
+    <Content Include="Content\Styles\EssentialJS\images\waitingpopup.gif" />
+    <Content Include="Content\Styles\EssentialJS\images\waitingpopup_small.gif" />
+    <Content Include="Content\Styles\Fonts\font-RobotoRegular.css" />
+    <Content Include="Content\Styles\Jcrop\images\jcrop.gif" />
+    <Content Include="Content\Styles\Jcrop\Jcrop.min.css" />
+    <Content Include="Content\Styles\LESS\Accounts\images\textboxLoader.gif" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Accounts\ChangePassword.js" />
+    <Content Include="Scripts\Accounts\ForgotPassword.js" />
+    <Content Include="Scripts\Accounts\Login.js" />
+    <Content Include="Scripts\Accounts\SyncfusionLogin.js" />
+    <Content Include="Scripts\Administration\DatabaseSettings.js" />
+    <Content Include="Scripts\Administration\KerberosAuthentication.js" />
+    <Content Include="Scripts\Administration\NotificationSettings.js" />
+    <Content Include="Scripts\Administration\ScheduleSynchronization.js" />
+    <Content Include="Scripts\Administration\Storage.js" />
+    <Content Include="Scripts\Administration\SystemSettings.js" />
+    <Content Include="Scripts\Administration\UserSettings.js" />
+    <Content Include="Scripts\AngularJS\angular-sanitize.min.js" />
+    <Content Include="Scripts\AngularJS\angular.min.js" />
+    <Content Include="Scripts\AngularJS\ej.widget.angular.min.js" />
+    <Content Include="Scripts\AngularJS\loginApp.js" />
+    <Content Include="Scripts\AngularJS\serverApp.js" />
+    <Content Include="Content\Styles\EssentialJS\common-images\ejicons.eot" />
+    <Content Include="Content\Styles\EssentialJS\common-images\ejicons.ttf" />
+    <Content Include="Content\Styles\EssentialJS\common-images\ejicons.woff" />
+    <Content Include="Content\Styles\Fonts\font-Server.less" />
+    <Content Include="Content\Styles\Fonts\variables.less" />
+    <Content Include="Content\Styles\LESS\Accounts\AccountActivation.less" />
+    <Content Include="Content\Styles\LESS\Accounts\ChangePassword.less" />
+    <Content Include="Content\Styles\LESS\Accounts\CodeConfirmation.less" />
+    <Content Include="Content\Styles\LESS\Accounts\footer.less" />
+    <Content Include="Content\Styles\LESS\Accounts\ForgetPassword.less" />
+    <Content Include="Content\Styles\LESS\Accounts\Layout.less" />
+    <Content Include="Content\Styles\LESS\Accounts\Login.less" />
+    <Content Include="Content\Styles\LESS\Accounts\PrivacyPolicyConfirmation.less" />
+    <Content Include="Content\Styles\LESS\Accounts\ResetPassword.less" />
+    <Content Include="Content\Styles\LESS\Accounts\SyncfusionLogin.less" />
+    <Content Include="Content\Styles\LESS\Admin\LicenseSettings.less" />
+    <Content Include="Content\Styles\LESS\Admin\NotificationSettings.less" />
+    <Content Include="Content\Styles\LESS\Admin\SAMLSettings.less" />
+    <Content Include="Content\Styles\LESS\Admin\SystemSettings.less" />
+    <Content Include="Content\Styles\LESS\Admin\UserSettings.less" />
+    <Content Include="Content\Styles\LESS\Components\PageWrapper.less" />
+    <Content Include="Content\Styles\LESS\Components\Popup.less" />
+    <Content Include="Content\Styles\LESS\Components\Radiobutton.less" />
+    <Content Include="Content\Styles\LESS\Components\Switch.less" />
+    <Content Include="Content\Styles\LESS\Grid.less" />
+    <Content Include="Content\Styles\LESS\Mixins.less" />
+    <Content Include="Content\Styles\LESS\NewMaster.less" />
+    <Content Include="Content\Styles\LESS\NewThemes\ElementColor.less" />
+    <Content Include="Content\Styles\LESS\NewThemes\ElementSize.less" />
+    <Content Include="Content\Styles\LESS\NewThemes\Mixins.less" />
+    <Content Include="Content\Styles\LESS\PasswordPolicy.less" />
+    <Content Include="Content\Styles\LESS\PasswordPolicyRules.less" />
+    <Content Include="Content\Styles\LESS\Profile.less" />
+    <Content Include="Content\Styles\LESS\Themes\Default.less" />
+    <Content Include="Content\Styles\LESS\UserManagement.less" />
+    <Content Include="Content\Styles\LESS\Variables\ElementSize.less" />
+    <Content Include="Content\Styles\LESS\Variables\FontSize.less" />
+    <Content Include="Scripts\Bootstrap\bootstrap-select.min.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\Core\MobileMenu.js" />
+    <Content Include="Scripts\Core\Placeholder.js" />
+    <Content Include="Scripts\Core\Server.Core.js" />
+    <Content Include="Scripts\Editor\easymde.min.js" />
+    <Content Include="Scripts\EssentialJS\common\ej.core.min.js" />
+    <Content Include="Scripts\EssentialJS\common\ej.data.min.js" />
+    <Content Include="Scripts\EssentialJS\common\ej.draggable.min.js" />
+    <Content Include="Scripts\EssentialJS\common\ej.globalize.min.js" />
+    <Content Include="Scripts\EssentialJS\common\ej.scroller.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.autocomplete.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.button.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.checkbox.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.datepicker.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.datetimepicker.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.dialog.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.dropdownlist.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.editor.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.excelfilter.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.grid.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.menu.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.pager.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.radiobutton.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.timepicker.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.toolbar.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.tooltip.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.treeview.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.uploadbox.min.js" />
+    <Content Include="Scripts\EssentialJS\ej.waitingpopup.min.js" />
+    <Content Include="Scripts\Jcrop\Jcrop.min.js" />
+    <Content Include="Scripts\jQuery\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jQuery\jquery.easing-1.3.min.js" />
+    <Content Include="Scripts\jQuery\jquery.globalize.min.js" />
+    <Content Include="Scripts\jQuery\jquery.validate.min.js" />
+    <Content Include="Scripts\jQuery\jsrender.min.js" />
+    <Content Include="Scripts\Password\ChangePassword.js" />
+    <Content Include="Scripts\Password\PasswordPolicy.js" />
+    <Content Include="Scripts\Password\ShowHidePassword.js" />
+    <Content Include="Scripts\System\CheckMailSettings.js" />
+    <Content Include="Scripts\User\AccountActivation.js" />
+    <Content Include="Scripts\User\ActiveDirectoryUserImport.js" />
+    <Content Include="Scripts\User\DeleteUserData.js" />
+    <Content Include="Scripts\User\EditProfile.js" />
+    <Content Include="Scripts\User\ManageAccount.js" />
+    <Content Include="Scripts\User\SynchronizeUsers.js" />
+    <Content Include="Scripts\User\UserDelete.js" />
+    <Content Include="Scripts\User\UserImportDatabase.js" />
+    <Content Include="Scripts\User\UserManagement.js" />
+    <Content Include="Scripts\User\UserManagementProfile.js" />
+    <Content Include="Scripts\User\UserNotificationSettings.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -178,6 +290,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Accounts\Login.cshtml" />
+    <Content Include="Views\Shared\_Layout.Accounts.cshtml" />
+    <Content Include="Views\Shared\_LocalizationContent.cshtml" />
+    <Content Include="Views\Shared\_LoginForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -193,8 +309,24 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bounty.Base\Bounty.Base.csproj">
+      <Project>{75D8EBC3-1A4E-480B-9120-50874C297656}</Project>
+      <Name>Bounty.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bounty.DataClasses\Bounty.DataClasses.csproj">
+      <Project>{4333AEAF-618D-43F5-8D49-E25EFA60739D}</Project>
+      <Name>Bounty.DataClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bounty.Data\Bounty.Data.csproj">
+      <Project>{8D11BC89-F13B-4DF7-96D1-73DF9F8C510F}</Project>
+      <Name>Bounty.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syncfusion.Server.Base.BoldService\Syncfusion.Server.Base.BoldService.csproj">
+      <Project>{06277ed4-9f5f-43da-87b2-896a71569ca9}</Project>
+      <Name>Syncfusion.Server.Base.BoldService</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -5,16 +5,73 @@ VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hackathon_2019", "hackathon_2019\hackathon_2019.csproj", "{B3B42297-F741-461D-85EB-141AA163F8CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syncfusion.Server.Base.BoldService", "Syncfusion.Server.Base.BoldService\Syncfusion.Server.Base.BoldService.csproj", "{06277ED4-9F5F-43DA-87B2-896A71569CA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bounty.Base", "Bounty.Base\Bounty.Base.csproj", "{75D8EBC3-1A4E-480B-9120-50874C297656}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bounty.DataClasses", "Bounty.DataClasses\Bounty.DataClasses.csproj", "{4333AEAF-618D-43F5-8D49-E25EFA60739D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bounty.Data", "Bounty.Data\Bounty.Data.csproj", "{8D11BC89-F13B-4DF7-96D1-73DF9F8C510F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		DashboardServer|Any CPU = DashboardServer|Any CPU
+		DashboardServerSaaS|Any CPU = DashboardServerSaaS|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		ReportServer|Any CPU = ReportServer|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3B42297-F741-461D-85EB-141AA163F8CF}.DashboardServer|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B42297-F741-461D-85EB-141AA163F8CF}.DashboardServer|Any CPU.Build.0 = Debug|Any CPU
+		{B3B42297-F741-461D-85EB-141AA163F8CF}.DashboardServerSaaS|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B42297-F741-461D-85EB-141AA163F8CF}.DashboardServerSaaS|Any CPU.Build.0 = Debug|Any CPU
 		{B3B42297-F741-461D-85EB-141AA163F8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B3B42297-F741-461D-85EB-141AA163F8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3B42297-F741-461D-85EB-141AA163F8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3B42297-F741-461D-85EB-141AA163F8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3B42297-F741-461D-85EB-141AA163F8CF}.ReportServer|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B42297-F741-461D-85EB-141AA163F8CF}.ReportServer|Any CPU.Build.0 = Release|Any CPU
+		{06277ED4-9F5F-43DA-87B2-896A71569CA9}.DashboardServer|Any CPU.ActiveCfg = Debug|Any CPU
+		{06277ED4-9F5F-43DA-87B2-896A71569CA9}.DashboardServer|Any CPU.Build.0 = Debug|Any CPU
+		{06277ED4-9F5F-43DA-87B2-896A71569CA9}.DashboardServerSaaS|Any CPU.ActiveCfg = Debug|Any CPU
+		{06277ED4-9F5F-43DA-87B2-896A71569CA9}.DashboardServerSaaS|Any CPU.Build.0 = Debug|Any CPU
+		{06277ED4-9F5F-43DA-87B2-896A71569CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06277ED4-9F5F-43DA-87B2-896A71569CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06277ED4-9F5F-43DA-87B2-896A71569CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06277ED4-9F5F-43DA-87B2-896A71569CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06277ED4-9F5F-43DA-87B2-896A71569CA9}.ReportServer|Any CPU.ActiveCfg = Release|Any CPU
+		{06277ED4-9F5F-43DA-87B2-896A71569CA9}.ReportServer|Any CPU.Build.0 = Release|Any CPU
+		{75D8EBC3-1A4E-480B-9120-50874C297656}.DashboardServer|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D8EBC3-1A4E-480B-9120-50874C297656}.DashboardServer|Any CPU.Build.0 = Debug|Any CPU
+		{75D8EBC3-1A4E-480B-9120-50874C297656}.DashboardServerSaaS|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D8EBC3-1A4E-480B-9120-50874C297656}.DashboardServerSaaS|Any CPU.Build.0 = Debug|Any CPU
+		{75D8EBC3-1A4E-480B-9120-50874C297656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D8EBC3-1A4E-480B-9120-50874C297656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D8EBC3-1A4E-480B-9120-50874C297656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D8EBC3-1A4E-480B-9120-50874C297656}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D8EBC3-1A4E-480B-9120-50874C297656}.ReportServer|Any CPU.ActiveCfg = Release|Any CPU
+		{75D8EBC3-1A4E-480B-9120-50874C297656}.ReportServer|Any CPU.Build.0 = Release|Any CPU
+		{4333AEAF-618D-43F5-8D49-E25EFA60739D}.DashboardServer|Any CPU.ActiveCfg = Debug|Any CPU
+		{4333AEAF-618D-43F5-8D49-E25EFA60739D}.DashboardServer|Any CPU.Build.0 = Debug|Any CPU
+		{4333AEAF-618D-43F5-8D49-E25EFA60739D}.DashboardServerSaaS|Any CPU.ActiveCfg = Debug|Any CPU
+		{4333AEAF-618D-43F5-8D49-E25EFA60739D}.DashboardServerSaaS|Any CPU.Build.0 = Debug|Any CPU
+		{4333AEAF-618D-43F5-8D49-E25EFA60739D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4333AEAF-618D-43F5-8D49-E25EFA60739D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4333AEAF-618D-43F5-8D49-E25EFA60739D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4333AEAF-618D-43F5-8D49-E25EFA60739D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4333AEAF-618D-43F5-8D49-E25EFA60739D}.ReportServer|Any CPU.ActiveCfg = Release|Any CPU
+		{4333AEAF-618D-43F5-8D49-E25EFA60739D}.ReportServer|Any CPU.Build.0 = Release|Any CPU
+		{8D11BC89-F13B-4DF7-96D1-73DF9F8C510F}.DashboardServer|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D11BC89-F13B-4DF7-96D1-73DF9F8C510F}.DashboardServer|Any CPU.Build.0 = Debug|Any CPU
+		{8D11BC89-F13B-4DF7-96D1-73DF9F8C510F}.DashboardServerSaaS|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D11BC89-F13B-4DF7-96D1-73DF9F8C510F}.DashboardServerSaaS|Any CPU.Build.0 = Debug|Any CPU
+		{8D11BC89-F13B-4DF7-96D1-73DF9F8C510F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D11BC89-F13B-4DF7-96D1-73DF9F8C510F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D11BC89-F13B-4DF7-96D1-73DF9F8C510F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D11BC89-F13B-4DF7-96D1-73DF9F8C510F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D11BC89-F13B-4DF7-96D1-73DF9F8C510F}.ReportServer|Any CPU.ActiveCfg = Release|Any CPU
+		{8D11BC89-F13B-4DF7-96D1-73DF9F8C510F}.ReportServer|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
